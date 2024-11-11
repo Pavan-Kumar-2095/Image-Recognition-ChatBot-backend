@@ -21,7 +21,7 @@ cloudinary.config({
 
 
 const allowedOrigins = [
-  'https://image-recognition-chat-bot-pavan-kumar-2095s-projects.vercel.app/',
+  'https://image-recognition-chat-bot.vercel.app',
 ];
 
 app.use(cors({
