@@ -19,8 +19,13 @@ cloudinary.config({
     api_secret: '-1LqPTfukFg0WnRQFnWAfufLiYQ' // Click 'View API Keys' above to copy your API secret
 });
 
+
+const allowedOrigins = [
+  'https://image-recognition-chat-bot-pavan-kumar-2095s-projects.vercel.app',
+];
+
 app.use(cors({
-  origin: 'https://image-recognition-chat-bot.vercel.app',
+  origin: allowedOrigins,
 }));
 
 const genAI = new GoogleGenerativeAI(process.env.KEY); 
