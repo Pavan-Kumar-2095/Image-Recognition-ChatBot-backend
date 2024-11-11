@@ -20,7 +20,7 @@ cloudinary.config({
 });
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://image-recognition-chat-bot.vercel.app/',
 }));
 
 const genAI = new GoogleGenerativeAI(process.env.KEY); 
