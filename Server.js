@@ -27,8 +27,8 @@ const allowedOrigins = [
 app.use(cors({
   origin: allowedOrigins,
 }));
-const apikey = process.env.API_KEY;
-const genAI = new GoogleGenerativeAI(api_key=apikey); 
+
+const genAI = new GoogleGenerativeAI(api_key="AIzaSyAjHwUezAl-I-JmzVokQ7TpIE0V8Y9Y1YY"); 
 
 const storage = multer.diskStorage({
     destination:(req,file,cb)=>{
