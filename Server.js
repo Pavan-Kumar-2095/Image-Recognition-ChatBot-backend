@@ -102,17 +102,14 @@ app.post('/Analyse', async (req, res) => {
         const prompt = req.body.message;
         
         // Call the function to fetch the image, convert it to Base64
-        const result = await model.generateContent([
-            prompt, 
-            await fileToGenerativePart(cloudinary_Generated_Url_of_Image , "image/jpeg")
-        ]);
+        const result = await model.generateContent([prompt, await fileToGenerativePart(cloudinary_Generated_Url_of_Image , "image/jpeg")]);
         
         const responseText = await result.response.text();
         res.send(responseText);
         console.log(prompt, responseText);
     } catch (err) {
         console.error("Error in Analyse endpoint:", err);
-        res.status(500).json({ error: err.message });
+        res.status(500).json({ error: "Try again" });
     }
 });
 
